@@ -1,0 +1,144 @@
+.profile {
+  display: grid;
+  grid-template-columns: 410px;
+  padding: 73px 0 69px;
+}
+
+.profile__title {
+  margin: 0;
+  padding: 0;
+  padding-bottom: 125px;
+  text-align: center;
+  word-wrap: break-word;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.profile__fieldset {
+  height: 62px;
+  margin: 0;
+  margin-bottom: 86px;
+  padding: 0;
+  border: none;
+}
+
+.profile__label {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 18px;
+  padding-bottom: 16px;
+}
+
+.profile__label::after {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  content: '';
+  transition: background-color var(--animation-time) var(--animation-cubic);
+  background-color: transparent;
+}
+
+.profile__label:focus-within::after {
+  background-color: var(--btn-color-ocean);
+}
+
+.profile__label:first-child {
+  border-bottom: 1px solid var(--bg-color-light);
+}
+
+.profile__descr {
+  width: 65px;
+  font-size: 11px;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.profile__input {
+  width: 100%;
+  padding: 0;
+  text-align: end;
+  color: var(--text-color-lighter);
+  border: none;
+  outline: inherit;
+  background-color: var(--bg-color-darkest);
+  font-size: 11px;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.profile__list-link {
+  margin: 0;
+  margin-top: 17px;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.profile__list-item-link {
+  transition: var(--animate-opacity);
+  text-decoration: none;
+  color: inherit;
+  font-size: 13px;
+}
+
+.profile__list-item-link:hover {
+  cursor: pointer;
+  opacity: var(--opacity-link);
+}
+
+.profile__list-item-link_style_logout {
+  display: inline-block;
+  margin-top: 16px;
+  color: var(--btn-color-light);
+}
+
+.profile__list-item-link_style_logout:hover {
+  cursor: pointer;
+  opacity: var(--opacity-link);
+}
+
+@media screen and (max-width: 1175px) {
+  .profile {
+    padding: 236px 0 269px;
+  }
+
+  .profile__title {
+    padding-bottom: 96px;
+  }
+
+  .profile__fieldset {
+    margin-bottom: 77px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .profile {
+    grid-template-columns: 260px;
+    padding: 69px 0 38px;
+  }
+
+  .profile__title {
+    padding-bottom: 82px;
+  }
+
+  .profile__fieldset {
+    margin-bottom: 243px;
+  }
+
+  .profile__descr {
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .profile__list-item-link {
+    text-align: center;
+    font-size: 12px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: normal;
+  }
+}
