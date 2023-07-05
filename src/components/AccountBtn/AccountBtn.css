@@ -1,0 +1,27 @@
+.account-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100px;
+  height: 30px;
+  cursor: pointer;
+  transition: var(--animate-opacity), var(--animate-transform);
+  text-decoration: none;
+  color: var(--text-color-lighter);
+  background-color: transparent;
+  background-image: url('../../images/iconAccount.svg');
+  background-repeat: no-repeat;
+  background-position: 100%;
+  background-size: 30px 30px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.14;
+}
+
+.account-btn:hover {
+  opacity: var(--opacity-btn);
+}
+
+.account-btn:active {
+  transform: var(--translateY);
+}
