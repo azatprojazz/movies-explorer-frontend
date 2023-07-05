@@ -1,0 +1,54 @@
+.register {
+  box-sizing: border-box;
+}
+
+.register__input-label {
+  color: var(--bg-color-lighter);
+  font-size: 10px;
+}
+
+.register__input {
+  height: 28px;
+  margin-bottom: 25px;
+  padding: 0;
+  padding-bottom: 3px;
+  transition: border-bottom var(--animation-time) var(--animation-cubic);
+  letter-spacing: 0.01em;
+  color: inherit;
+  border: none;
+  border-bottom: 1px solid var(--bg-color-light);
+  outline: transparent;
+  background-color: transparent;
+  font-size: 14px;
+  line-height: normal;
+}
+
+.register__input:focus {
+  letter-spacing: 0;
+  border-bottom: 1px solid var(--btn-color-ocean);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.register__input:last-of-type {
+  margin-bottom: 8px;
+  padding-bottom: 3px;
+}
+
+.register__input_type_password {
+  margin: 0;
+  padding: 0;
+  letter-spacing: 0.01em;
+  color: var(--btn-color-light);
+  font-size: 14px;
+}
+
+.register__input_type_password:focus {
+  letter-spacing: 0.04em;
+  border-bottom: 1px solid var(--btn-color-light);
+}
+
+.register__input-error {
+  color: var(--btn-color-light);
+  font-size: 10px;
+}
