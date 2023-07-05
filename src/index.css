@@ -1,0 +1,54 @@
+@import url('./vendor/normalize.css');
+@import url('./vendor/fonts/fonts.css');
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-color-darkest);
+}
+
+/* colors */
+:root {
+  --bg-color-darkest: #202020;
+  --bg-color-darker: #272727;
+  --bg-color-dark: #303030;
+  --bg-color-medium: #073042;
+  --bg-color-light: #424242;
+  --bg-color-lighter: #8b8b8b;
+  --border-color-lighter: #e6e6e6;
+  --text-color-darkest: #000;
+  --text-color-darker: #2f2f2f;
+  --text-color-light: #a0a0a0;
+  --text-color-lighter: #fff;
+  --search-color-medium: #2f2f2f;
+  --btn-color-medium: #313131;
+  --btn-color-light: #ee3465;
+  --btn-color-lighter: #3ddc84;
+  --btn-color-ocean: #4285f4;
+}
+
+/* animation */
+:root {
+  --animation-time: 1.5s;
+  --animation-cubic: cubic-bezier(0.3, 0.8, 0, 1);
+}
+
+/* opacity */
+:root {
+  --opacity-btn: 0.8;
+  --opacity-link: 0.69;
+}
+
+/* transform */
+:root {
+  --scale: scale(0.9);
+  --translateY: translateY(5%);
+}
+
+/* transition */
+:root {
+  --animate-opacity: opacity var(--animation-time) var(--animation-cubic);
+  --animate-transform: transform 0.5s var(--animation-cubic);
+}
