@@ -37,6 +37,7 @@ function Login({ onSubmit }) {
           value={email}
           onChange={handleEmailChange}
           className="login__input"
+          placeholder="Введите email"
           autoComplete="off"
           required
         />
@@ -54,6 +55,7 @@ function Login({ onSubmit }) {
           value={password}
           onChange={handlePasswordChange}
           className="login__input login__input_type_password"
+          placeholder="Введите пароль"
           autoComplete="off"
           required
         />

@@ -49,6 +49,7 @@ function Profile({ user = { name: 'Виталий', email: 'pochta@yandex.ru' },
               maxLength="30"
               required
               autoComplete="off"
+              placeholder="Введите имя"
             />
           </label>
           <label htmlFor="email" className="profile__label">
@@ -62,6 +63,7 @@ function Profile({ user = { name: 'Виталий', email: 'pochta@yandex.ru' },
               onChange={handleEmailChange}
               minLength="2"
               maxLength="50"
+              placeholder="Введите email"
               required
               autoComplete="off"
             />

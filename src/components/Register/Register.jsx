@@ -42,6 +42,7 @@ function Register({ onSubmit }) {
           autoComplete="off"
           value={name}
           onChange={handleNameChange}
+          placeholder="Введите имя"
           required
         />
         <span className="register__input-error"></span>
@@ -57,6 +58,7 @@ function Register({ onSubmit }) {
           autoComplete="off"
           value={email}
           onChange={handleEmailChange}
+          placeholder="Введите email"
           required
         />
         <span className="register__input-error"></span>
@@ -73,6 +75,7 @@ function Register({ onSubmit }) {
           maxLength="30"
           value={password}
           onChange={handlePasswordChange}
+          placeholder="Введите пароль"
           required
         />
         <span className="register__input-error">Что-то пошло не так...</span>
