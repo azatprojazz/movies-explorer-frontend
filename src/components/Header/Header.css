@@ -1,0 +1,15 @@
+.header {
+  width: 100%;
+  background-color: var(--bg-color-medium);
+}
+
+.header_path_movies {
+  background-color: var(--bg-color-darkest);
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 74px;
+}
