@@ -1,0 +1,40 @@
+.section-container {
+  width: 1140px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1175px) {
+  .section-container {
+    width: 708px;
+  }
+
+  .tablet-container-large {
+    width: 668px;
+  }
+
+  .tablet-container-medium {
+    width: 410px;
+  }
+
+  .tablet-container-small {
+    width: 396px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .section-container {
+    width: 292px;
+  }
+
+  .mobile-container-large {
+    width: 300px;
+  }
+
+  .mobile-container-medium {
+    width: 284px;
+  }
+
+  .mobile-container-small {
+    width: 260px;
+  }
+}
