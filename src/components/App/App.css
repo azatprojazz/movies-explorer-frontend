@@ -1,0 +1,17 @@
+.app {
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+  box-sizing: border-box;
+  min-width: 320px;
+  min-height: 100vh;
+  color: var(--text-color-lighter);
+  background-color: var(--bg-color-darkest);
+  font-family: 'Inter', 'Helvetica Neue', 'Arial', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+}
