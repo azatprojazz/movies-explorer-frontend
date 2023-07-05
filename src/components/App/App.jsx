@@ -14,6 +14,7 @@ import NotFound from '../NotFound/NotFound';
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false); // Статус входа пользователя
+  const [isLoading] = useState(false); // Чтобы увидеть preloader, нужно переключить на true
   const [isBurgerOpen, setIsBurgerOpen] = useState(false); // Открыто ли бургер-меню
   const [user, setUser] = useState({ name: 'Виталий', email: 'pochta@yandex.ru' }); // Состояние данных пользователя
   const { pathname } = useLocation(); // Текущий путь
@@ -73,7 +74,13 @@ function App() {
         <Route path="/" element={<Main />}></Route>
         <Route
           path="/movies"
-          element={<Movies initialMovies={initialMovies} onLoadMore={handleLoadMore} />}
+          element={
+            <Movies
+              initialMovies={initialMovies}
+              onLoadMore={handleLoadMore}
+              isLoading={isLoading}
+            />
+          }
         ></Route>
         <Route path="/saved-movies" element={<SavedMovies />}></Route>
         <Route path="/signup" element={<Register onSubmit={handleRegister} />}></Route>
