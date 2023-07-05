@@ -1,0 +1,15 @@
+{
+  "short_name": "Кино-Компас",
+  "name": "Поисковик фильмов на любой вкус",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/svg"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
