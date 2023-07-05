@@ -1,0 +1,43 @@
+.promo {
+  display: flex;
+  align-items: center;
+  padding: 185px 0 223px;
+  background-color: var(--bg-color-medium);
+  background-image: url('../../images/yandexLogo.svg');
+  background-repeat: no-repeat;
+  background-position: 50% 40%;
+  background-size: 320px 320px;
+}
+
+.promo__title {
+  max-width: 730px;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+  letter-spacing: -0.04em;
+  color: var(--text-color-lighter);
+  font-size: 50px;
+  font-weight: normal;
+  line-height: 1.16;
+}
+
+@media screen and (max-width: 1175px) {
+  .promo {
+    padding: 326px 0 343px;
+    background-position: 50% 48.2%;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .promo {
+    padding: 208px 0 245px;
+    background-position: 50% 44%;
+    background-size: 248px 248px;
+  }
+
+  .promo__title {
+    max-width: 300px;
+    font-size: 31px;
+    line-height: 1.26;
+  }
+}
