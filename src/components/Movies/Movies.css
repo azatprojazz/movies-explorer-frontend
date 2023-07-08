@@ -1,0 +1,38 @@
+.movies {
+  background: var(--bg-color-darkest);
+}
+
+.movies__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 320px;
+  height: 36px;
+  margin: 0 auto 80px;
+  padding: 0;
+  transition: var(--animate-opacity), var(--animate-transform);
+  text-align: center;
+  color: var(--text-color-lighter);
+  border: 1px solid var(--bg-color-light);
+  border-radius: 6px;
+  background-color: var(--bg-color-darkest);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.movies__button:hover {
+  cursor: pointer;
+  opacity: var(--opacity-btn);
+}
+
+.movies__button:active {
+  transform: var(--scale);
+}
+
+@media screen and (max-width: 750px) {
+  .movies__button {
+    width: 240px;
+    margin-bottom: 100px;
+  }
+}

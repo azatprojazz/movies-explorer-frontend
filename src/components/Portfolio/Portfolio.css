@@ -1,0 +1,115 @@
+.portfolio {
+  padding: 0 0 125px;
+  background-color: var(--bg-color-darkest);
+}
+
+.portfolio__title {
+  margin: 0;
+  padding-bottom: 49px;
+  user-select: none;
+  color: var(--text-color-light);
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 1.11;
+}
+
+.portfolio__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.portfolio__list-item {
+  margin: 0 0 20px;
+  padding: 0 0 19px;
+  border-bottom: 1px solid var(--bg-color-light);
+}
+
+.portfolio__list-item:last-of-type {
+  margin: 0;
+  padding: 0;
+  border-bottom: none;
+}
+
+.portfolio__link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: var(--animate-opacity);
+  text-decoration: none;
+  color: var(--text-color-lighter);
+}
+
+.portfolio__link:hover {
+  opacity: var(--opacity-link);
+}
+
+.portfolio__link:hover .portfolio__arrow {
+  transform: rotate(-135deg);
+}
+
+.portfolio__subtitle {
+  margin: 0;
+  transition: transform var(--animation-time) var(--animation-cubic);
+  letter-spacing: -0.04em;
+  font-size: 30px;
+  line-height: 1.67;
+}
+
+.portfolio__subtitle:hover {
+  transform: translateX(4%);
+}
+
+.portfolio__arrow {
+  position: absolute;
+  right: 1.7px;
+  top: 12.1px;
+  transition: transform 0.8s var(--animation-cubic);
+  letter-spacing: -0.04em;
+  font-size: 30px;
+  line-height: normal;
+}
+
+@media screen and (max-width: 1175px) {
+  .portfolio {
+    padding: 0 0 89px;
+  }
+
+  .portfolio__list-item {
+    border-bottom: 1px solid var(--border-color-lighter);
+  }
+
+  .portfolio__subtitle {
+    letter-spacing: -1.12px;
+    font-size: 28px;
+    line-height: 1.79;
+  }
+
+  .portfolio__arrow {
+    right: 1px;
+    top: 12.5px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .portfolio__title {
+    padding-bottom: 40px;
+    font-size: 14px;
+    line-height: 1.43;
+  }
+
+  .portfolio__subtitle {
+    letter-spacing: -0.04em;
+    font-size: 18px;
+    line-height: 1.56;
+  }
+
+  .portfolio__arrow {
+    right: 1.5px;
+    top: 4.9px;
+    letter-spacing: -0.72px;
+    font-size: 18px;
+    line-height: 19px;
+  }
+}

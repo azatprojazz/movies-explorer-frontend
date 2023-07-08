@@ -1,0 +1,14 @@
+.logo {
+  display: block;
+  width: 38px;
+  height: 38px;
+  transition: var(--animate-opacity), var(--animate-transform);
+}
+
+.logo:hover {
+  opacity: var(--opacity-link);
+}
+
+.logo:active {
+  transform: var(--scale);
+}
