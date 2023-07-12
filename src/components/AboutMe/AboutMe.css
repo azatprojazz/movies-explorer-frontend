@@ -17,7 +17,7 @@
 
 .about-me__container {
   display: grid;
-  grid-template: repeat(2, min-content) 1fr/ 599px 270px 270px;
+  grid-template: repeat(2, min-content) 1fr / 599px 270px 270px;
 }
 
 .about-me__subtitle {
@@ -89,7 +89,7 @@
 
   .about-me__container {
     display: grid;
-    grid-template: repeat(2, min-content) 1fr/ 364px 49px 255px;
+    grid-template: repeat(2, min-content) 1fr / 364px 49px 255px;
   }
 
   .about-me__subtitle {
@@ -128,7 +128,7 @@
   }
 
   .about-me__container {
-    grid-template: repeat(3, min-content) 1fr/ 1fr;
+    grid-template: repeat(3, min-content) 1fr / 1fr;
   }
 
   .about-me__subtitle {
