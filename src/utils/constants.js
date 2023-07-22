@@ -18,7 +18,7 @@ export const NUMBER_CARDS_FOR_TABLET = 8;
 export const NUMBER_CARDS_FOR_MOBILE = 5;
 export const NUMBER_CARDS_ADD_FOR_DESKTOP = 3;
 export const NUMBER_CARDS_ADD_FOR_MOBILE_GADGETS = 2;
-export const TIMEOUT_FOR_RESIZE = 500;
+export const TIMEOUT_FOR_RESIZE = 100;
 export const ZERO_CARDS = 0;
 
 // Константы для запросов
