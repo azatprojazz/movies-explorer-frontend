@@ -1,3 +1,5 @@
+import { MY_API } from './constants';
+
 class MainApi {
   // Конструктор класса, принимает на вход объект с настройками API
   constructor(options) {
@@ -92,12 +94,18 @@ class MainApi {
       method: 'DELETE',
     });
   }
+
+  // Метод для выхода из системы (logout)
+  logout() {
+    return this._fetch('/signout', {
+      method: 'GET',
+    });
+  }
 }
 
 // Создание экземпляра класса с настройками
 export const mainApi = new MainApi({
-  baseUrl: 'http://localhost:3000',
-  // baseUrl: 'https://api.azatprojazz-movies.nomoredomains.rocks',
+  baseUrl: MY_API,
   headers: {
     'Content-Type': 'application/json',
   },
