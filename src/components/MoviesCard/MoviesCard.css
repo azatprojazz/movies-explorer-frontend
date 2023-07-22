@@ -1,6 +1,11 @@
 .movies-card {
   position: relative;
+  transition: transform var(--animation-time) var(--animation-cubic);
   animation: fadeIn var(--animation-time) var(--animation-cubic);
+}
+
+.movies-card:hover {
+  transform: scale(1.03);
 }
 
 .movies-card__link {
@@ -88,7 +93,7 @@
 
 .movies-card__container {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   margin: 0;
   padding: 14px 14px 0;
@@ -98,7 +103,7 @@
   display: -webkit-box;
   overflow: hidden;
   -webkit-box-orient: vertical;
-  max-width: 234px;
+  max-width: 265px;
   margin: 0;
   font-size: 13px;
   font-weight: 500;
