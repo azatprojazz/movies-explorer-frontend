@@ -1,7 +1,7 @@
 import './AboutMe.css';
 
 import React from 'react';
-import profilePhoto from '../../images/profilePhoto.gif';
+import profilePhoto from '../../images/profilePhoto.jpg';
 
 function AboutMe() {
   return (
@@ -33,7 +33,7 @@ function AboutMe() {
             </a>
           </li>
         </ul>
-        <img className="about-me__img" src={profilePhoto} alt="Анимированное изображение автора" />
+        <img className="about-me__img" src={profilePhoto} alt="Изображение автора" />
       </div>
     </section>
   );
