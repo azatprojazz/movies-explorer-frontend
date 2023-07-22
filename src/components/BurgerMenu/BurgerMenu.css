@@ -54,8 +54,8 @@
 
 @media screen and (max-width: 750px) {
   .burger-menu {
-    right: -320px;
-    width: 320px;
+    right: -100vw;
+    width: 100vw;
     padding: 144px 0 48px;
   }
 
@@ -73,11 +73,5 @@
 
   .burger-menu__link_active {
     padding-bottom: 7px;
-  }
-}
-
-@media screen and (max-width: 320px) {
-  .burger-menu {
-    width: 100vw;
   }
 }
