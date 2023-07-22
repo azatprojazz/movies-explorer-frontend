@@ -70,28 +70,19 @@ function Movies({
   }, [addMoviesCount, moviesLength]);
   // Обработчик изменения размера окна
   useEffect(() => {
-    let timeoutId = null;
-    // Функция-обработчик изменения размера окна
+    let timeoutId;
     const handleResize = () => {
-      // Отменяем предыдущий таймаут, если он был установлен
-      if (timeoutId) {
-        clearTimeout(timeoutId);
-      }
-      // Задерживаем обновление состояний screenWidth, addMoviesCount и showMoviesLength
-      // до окончания изменения размера окна, чтобы избежать ненужных ререндеров
+      clearTimeout(timeoutId); // Очищаем предыдущую задержку
       timeoutId = setTimeout(() => {
         setScreenWidth(window.innerWidth);
         setAddMoviesCount(getAddCount(window.innerWidth));
         setShowMoviesLength(getBaseCount());
-      }, TIMEOUT_FOR_RESIZE);
+      }, TIMEOUT_FOR_RESIZE); // Задержка TIMEOUT_FOR_RESIZE
     };
-    // Добавляем обработчик изменения размера окна
+    handleResize();
     window.addEventListener('resize', handleResize);
     return () => {
-      // Удаляем обработчик и отменяем таймаут при очистке эффекта
-      if (timeoutId) {
-        clearTimeout(timeoutId);
-      }
+      clearTimeout(timeoutId); // Очищаем задержку перед удалением эффекта
       window.removeEventListener('resize', handleResize);
     };
   }, [getAddCount, getBaseCount]);
