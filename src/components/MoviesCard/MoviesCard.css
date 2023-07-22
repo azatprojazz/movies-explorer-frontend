@@ -1,5 +1,6 @@
 .movies-card {
   position: relative;
+  animation: fadeIn var(--animation-time) var(--animation-cubic);
 }
 
 .movies-card__link {
@@ -154,5 +155,15 @@
 
   .movies-card__descr {
     font-size: 12px;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
   }
 }
