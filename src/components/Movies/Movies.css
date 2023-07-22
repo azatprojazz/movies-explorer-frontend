@@ -16,6 +16,7 @@
   color: var(--text-color-lighter);
   border: 1px solid var(--bg-color-light);
   border-radius: 6px;
+  outline: none;
   background-color: var(--bg-color-darkest);
   font-size: 12px;
   font-weight: 500;
