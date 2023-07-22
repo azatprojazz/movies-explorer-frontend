@@ -1,5 +1,6 @@
-import React from 'react';
 import './Techs.css';
+
+import React from 'react';
 
 function Techs() {
   return (
