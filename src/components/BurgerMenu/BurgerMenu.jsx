@@ -1,12 +1,13 @@
-import { NavLink } from 'react-router-dom';
-import Overlay from '../Overlay/Overlay';
 import './BurgerMenu.css';
+
 import AccountBtn from '../AccountBtn/AccountBtn';
 import BurgerMenuClose from '../BurgerMenuClose/BurgerMenuClose';
+import { NavLink } from 'react-router-dom';
+import Overlay from '../Overlay/Overlay';
 
 function BurgerMenu({ isOpen, onClose }) {
   return (
-    <Overlay isOpen={isOpen}>
+    <Overlay isOpen={isOpen} onClose={onClose}>
       <BurgerMenuClose onClose={onClose} />
       <aside className={`burger-menu ${isOpen ? 'burger-menu_is_opened' : ''}`}>
         <ul className="burger-menu__list">
@@ -16,6 +17,7 @@ function BurgerMenu({ isOpen, onClose }) {
               className={({ isActive }) =>
                 `burger-menu__link ${isActive ? 'burger-menu__link_active' : ''}`
               }
+              onClick={onClose}
             >
               Главная
             </NavLink>
@@ -26,6 +28,7 @@ function BurgerMenu({ isOpen, onClose }) {
               className={({ isActive }) =>
                 `burger-menu__link ${isActive ? 'burger-menu__link_active' : ''}`
               }
+              onClick={onClose}
             >
               Фильмы
             </NavLink>
@@ -36,12 +39,13 @@ function BurgerMenu({ isOpen, onClose }) {
               className={({ isActive }) =>
                 `burger-menu__link ${isActive ? 'burger-menu__link_active' : ''}`
               }
+              onClick={onClose}
             >
               Сохранённые фильмы
             </NavLink>
           </li>
         </ul>
-        <AccountBtn />
+        <AccountBtn onClose={onClose} />
       </aside>
     </Overlay>
   );
