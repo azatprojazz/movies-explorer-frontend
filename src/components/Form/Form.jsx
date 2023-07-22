@@ -1,23 +1,32 @@
-import { useState } from 'react';
 import './Form.css';
 
-function Form({ name, onSubmit, place, autorize, btnText, isProfileEdit = true, children }) {
-  const [isSuccess] = useState(true);
-  // Для того чтобы проверить наличие компонента, задайте стейту isSuccess значение false
+import { LOADING_TEXT } from '../../utils/constants';
 
-  const [isFormValid] = useState(true);
-  // Для того чтобы задизейблить кнопку, надо переключить isFormValid на false
+function Form({
+  name,
+  isFormValid,
+  handleSubmit,
+  errorText,
+  isLoading,
+  place,
+  autorize,
+  btnText,
+  isProfileEdit = true,
+  children,
+}) {
   return (
-    <form name={name} onSubmit={onSubmit} className={`form form_place_${place}`}>
+    <form
+      name={name}
+      onSubmit={handleSubmit}
+      className={`form mobile-container-small form_place_${place}`}
+    >
       {children}
       <div
         className={`form__container ${
           place !== 'profile' ? `form__container_path_${autorize}` : ''
         }`}
       >
-        <span className="form__server-errors">
-          {isSuccess ? '' : 'При обновлении профиля произошла ошибка.'}
-        </span>
+        <span className="form__error">{errorText}</span>
         {isProfileEdit && (
           <button
             className={`form__btn ${place === 'profile' ? 'form__btn_form_profile' : ''} ${
@@ -26,7 +35,7 @@ function Form({ name, onSubmit, place, autorize, btnText, isProfileEdit = true, 
             type="submit"
             disabled={!isFormValid}
           >
-            {btnText}
+            {isLoading ? LOADING_TEXT : btnText}
           </button>
         )}
       </div>
