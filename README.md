@@ -20,6 +20,8 @@
 
 Деплой проекта: [Deploy](https://azatprojazz-movies.nomoredomains.rocks/)
 
+Pull Request: [Pull Request](https://github.com/azatprojazz/movies-explorer-frontend/pull/2)
+
 ## Доступные скрипты
 
 В каталоге проекта вы можете выполнить:
