@@ -1,3 +1,5 @@
+import { MOVIES_URL } from './constants';
+
 class MoviesApi {
   // Конструктор класса, принимает на вход объект с настройками API
   constructor(options) {
@@ -28,5 +30,5 @@ class MoviesApi {
 
 // Создание экземпляра класса с настройками
 export const moviesApi = new MoviesApi({
-  baseUrl: 'https://api.nomoreparties.co/beatfilm-movies',
+  baseUrl: MOVIES_URL,
 });
