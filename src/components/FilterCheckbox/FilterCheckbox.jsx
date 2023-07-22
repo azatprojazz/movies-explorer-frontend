@@ -1,13 +1,14 @@
 import './FilterCheckbox.css';
 
-function FilterCheckbox() {
+function FilterCheckbox({ onChange, isChecked }) {
   return (
     <span className="filter-checkbox">
       <input
         id="filter-checkbox__input"
         className="filter-checkbox__input"
         type="checkbox"
-        defaultChecked
+        checked={isChecked}
+        onChange={onChange}
       />
       <label
         htmlFor="filter-checkbox__input"
