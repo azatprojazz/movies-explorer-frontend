@@ -1,17 +1,17 @@
-import { useState } from 'react';
-import AuthPage from '../AuthPage/AuthPage';
 import './Login.css';
 
-function Login({ onSubmit }) {
-  const [email, setEmail] = useState('pochta@yandex.ru');
-  const [password, setPassword] = useState('');
+import AuthPage from '../AuthPage/AuthPage';
+import { useForm } from '../../hooks/useForm';
 
-  const handleEmailChange = (event) => setEmail(event.target.value);
-  const handlePasswordChange = (event) => setPassword(event.target.value);
+function Login({ onSubmit }) {
+  const { values, errors, isFormValid, handleChange } = useForm({
+    email: '',
+    password: '',
+  });
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    onSubmit({ email, password });
+    onSubmit({ email: values.email, password: values.password });
   };
 
   return (
@@ -26,6 +26,7 @@ function Login({ onSubmit }) {
         onSubmit={handleSubmit}
         place="login"
         autorize="login"
+        isFormValid={isFormValid}
       >
         <label htmlFor="email" className="login__input-label">
           E-mail
@@ -34,14 +35,20 @@ function Login({ onSubmit }) {
           type="email"
           id="email"
           name="email"
-          value={email}
-          onChange={handleEmailChange}
-          className="login__input"
+          value={values.email}
+          onChange={handleChange}
+          className={`login__input ${!isFormValid && errors.email && 'login__input_invalid'}`}
           placeholder="Введите email"
           autoComplete="off"
           required
         />
-        <span className="login__input-error"></span>
+        <span
+          className={`login__input-error ${
+            !isFormValid && errors.email ? 'login__input-error_active' : ''
+          }`}
+        >
+          {errors.email || ''}
+        </span>
 
         <label htmlFor="password" className="login__input-label">
           Пароль
@@ -50,16 +57,22 @@ function Login({ onSubmit }) {
           type="password"
           id="password"
           name="password"
-          minLength="6"
+          minLength="8"
           maxLength="30"
-          value={password}
-          onChange={handlePasswordChange}
-          className="login__input login__input_type_password"
+          value={values.password}
+          onChange={handleChange}
+          className={`login__input ${!isFormValid && errors.password && 'login__input_invalid'}`}
           placeholder="Введите пароль"
           autoComplete="off"
           required
         />
-        <span className="login__input-error"></span>
+        <span
+          className={`login__input-error ${
+            !isFormValid && errors.password ? 'login__input-error_active' : ''
+          }`}
+        >
+          {errors.password || ''}
+        </span>
       </AuthPage>
     </main>
   );
