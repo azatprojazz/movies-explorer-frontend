@@ -1,7 +1,7 @@
 import './AboutMe.css';
 
 import React from 'react';
-import profilePhoto from '../../images/profilePhoto.jpg';
+import profilePhoto from '../../images/profilePhoto.gif';
 
 function AboutMe() {
   return (
