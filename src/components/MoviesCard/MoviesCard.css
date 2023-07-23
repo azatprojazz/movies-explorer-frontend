@@ -55,7 +55,7 @@
 
 .movies-card__btn_type_save {
   width: 72px;
-  height: 21px;
+  height: 28px;
   color: var(--text-color-lighter);
   border-radius: 30px;
   background-color: var(--btn-color-medium);
@@ -63,8 +63,8 @@
 }
 
 .movies-card__btn_type_saved {
-  width: 21px;
-  height: 21px;
+  width: 30px;
+  height: 30px;
   opacity: 1;
   background-color: transparent;
   background-image: url('../../images/savedBtn.svg');
@@ -74,8 +74,8 @@
 }
 
 .movies-card__btn_type_delete {
-  width: 21px;
-  height: 21px;
+  width: 30px;
+  height: 30px;
   background-color: transparent;
   background-image: url('../../images/deleteBtn.svg');
   background-repeat: no-repeat;
