@@ -65,4 +65,8 @@
   .login__input-error:last-of-type {
     margin-bottom: 80px;
   }
+
+  .login__input-error {
+    width: 260px;
+  }
 }

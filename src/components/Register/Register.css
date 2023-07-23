@@ -56,7 +56,6 @@
 
 .register__input-error_active {
   overflow: hidden;
-  width: 396px;
   height: 24px;
   margin-top: 6px;
   white-space: nowrap;
@@ -66,4 +65,10 @@
   font-weight: 400;
   font-style: normal;
   line-height: 1.2;
+}
+
+@media screen and (max-width: 750px) {
+  .register__input-error {
+    width: 260px;
+  }
 }
