@@ -64,29 +64,38 @@ function Movies({
     [moviesList, showMoviesLength],
   );
 
-  const handleMoreClick = useCallback(() =>
-  {
-    setShowMoviesLength((prev) =>
-    {
+  const handleMoreClick = useCallback(() => {
+    setShowMoviesLength((prev) => {
       const next = prev + addMoviesCount;
       return next > moviesLength ? moviesLength : next;
     });
   }, [addMoviesCount, moviesLength]);
+
   // Обработчик изменения размера окна
-  useEffect(() =>
-  {
-    const handleResize = () =>
-    {
-      setScreenWidth(window.innerWidth);
-      setAddMoviesCount(getAddCount(window.innerWidth));
+  useEffect(() => {
+    let initialScreenWidth = window.innerWidth;
+
+    const handleResize = () => {
+      const newScreenWidth = window.innerWidth;
+
+      // Если ширина экрана не изменилась, ничего не делаем
+      if (initialScreenWidth === newScreenWidth) {
+        return;
+      }
+
+      // Обновляем ширину экрана и сохраняем текущую ширину экрана
+      initialScreenWidth = newScreenWidth;
+      setScreenWidth(newScreenWidth);
+      setAddMoviesCount(getAddCount(newScreenWidth));
       setShowMoviesLength(getBaseCount());
     };
 
-    handleResize();
+    // Вызываем функции при первоначальном рендере
+    setAddMoviesCount(getAddCount());
+    setShowMoviesLength(getBaseCount());
 
     window.addEventListener('resize', handleResize);
-    return () =>
-    {
+    return () => {
       window.removeEventListener('resize', handleResize);
     };
   }, [getAddCount, getBaseCount]);
