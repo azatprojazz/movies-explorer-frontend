@@ -14,9 +14,9 @@ function InfoTooltip({ isOpen, onClose, isSuccess = false, message }) {
           aria-label="Закрыть"
           onClick={onClose}
         ></button>
-        <h3 className={`popup__title popup__title_type_${isSuccess ? 'success' : 'error'}`}>
+        <p className={`popup__title popup__title_type_${isSuccess ? 'success' : 'error'}`}>
           {message}
-        </h3>
+        </p>
       </div>
     </Overlay>
   );
