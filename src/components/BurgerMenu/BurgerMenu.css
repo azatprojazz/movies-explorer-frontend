@@ -56,7 +56,7 @@
   .burger-menu {
     right: -100vw;
     width: 100vw;
-    padding: 144px 0 48px;
+    padding: 144px 0 90px;
   }
 
   .burger-menu_is_opened {
