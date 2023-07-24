@@ -25,6 +25,10 @@ function Profile({
   });
   const navigate = useNavigate();
 
+  useEffect(() => {
+    document.title = 'Профиль';
+  }, []);
+
   const isUserDataMatch = currentUser.name === values.name && currentUser.email === values.email;
 
   const handleEditClick = () => {

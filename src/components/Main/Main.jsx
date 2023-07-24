@@ -6,8 +6,13 @@ import NavTab from '../NavTab/NavTab';
 import Portfolio from '../Portfolio/Portfolio';
 import Promo from '../Promo/Promo';
 import Techs from '../Techs/Techs';
+import { useEffect } from 'react';
 
 function Main() {
+  useEffect(() => {
+    document.title = 'Главная страница';
+  }, []);
+
   return (
     <main className="main">
       <Promo />

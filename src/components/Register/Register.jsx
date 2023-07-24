@@ -16,6 +16,10 @@ function Register({ onSubmit, isLoading, isLoggedIn }) {
   const navigate = useNavigate();
 
   useEffect(() => {
+    document.title = 'Регистрация';
+  }, []);
+
+  useEffect(() => {
     isLoggedIn && navigate('/');
   }, [isLoggedIn, navigate]);
 

@@ -5,6 +5,7 @@ import { SAVED_MOVIES, ZERO_CARDS } from '../../utils/constants';
 import MoviesCardList from '../MoviesCardList/MoviesCardList';
 import Preloader from '../Preloader/Preloader';
 import SearchForm from '../SearchForm/SearchForm';
+import { useEffect } from 'react';
 
 function SavedMovies({
   isSuccess,
@@ -16,6 +17,10 @@ function SavedMovies({
 }) {
   // Чтение сохраненных фильмов из localStorage
   const savedMoviesInLs = JSON.parse(localStorage.getItem(SAVED_MOVIES));
+
+  useEffect(() => {
+    document.title = 'Сохраненные фильмы';
+  }, []);
 
   return (
     <main className="saved-movies">

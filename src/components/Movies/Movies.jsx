@@ -36,6 +36,10 @@ function Movies({
   // Состояние для текущей ширины экрана
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
+  useEffect(() => {
+    document.title = 'Фильмы';
+  }, []);
+
   // Функция для получения базового количества фильмов в зависимости от ширины экрана
   const getBaseCount = useCallback(() => {
     if (screenWidth > DESKTOP_WIDTH) {

@@ -14,6 +14,10 @@ function Login({ onSubmit, isLoading, isLoggedIn }) {
   const navigate = useNavigate();
 
   useEffect(() => {
+    document.title = 'Логин';
+  }, []);
+
+  useEffect(() => {
     isLoggedIn && navigate('/');
   }, [isLoggedIn, navigate]);
 

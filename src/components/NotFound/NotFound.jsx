@@ -1,9 +1,14 @@
+import { useEffect } from 'react';
 import './NotFound.css';
 
 import { useNavigate } from 'react-router-dom';
 
 function NotFound() {
   const navigate = useNavigate();
+
+  useEffect(() => {
+    document.title = 'Страница не найдена';
+  }, []);
 
   const goBack = (event) => {
     event.preventDefault();
