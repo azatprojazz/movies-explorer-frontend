@@ -23,7 +23,7 @@ function Header({ isLoggedIn }) {
   // Использование хука useLocation для получения текущего пути (pathname)
   const { pathname } = useLocation();
 
- // Создание класса для компонента header, зависящего от текущего маршрута.
+  // Создание класса для компонента header, зависящего от текущего маршрута.
   // Если путь совпадает с одним из указанных, добавляется специальный класс 'header_path_movies'
   const headerClass = `header ${
     pathname === '/movies' || pathname === '/saved-movies' || pathname === '/profile'

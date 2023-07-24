@@ -3,13 +3,21 @@ import './Register.css';
 import AuthPage from '../AuthPage/AuthPage';
 import { NAME_PATTERN } from '../../utils/constants';
 import { useForm } from '../../hooks/useForm';
+import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
-function Register({ onSubmit }) {
+function Register({ onSubmit, isLoading, isLoggedIn }) {
   const { values, errors, isFormValid, handleChange } = useForm({
     email: '',
     password: '',
     name: '',
   });
+
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    isLoggedIn && navigate('/');
+  }, [isLoggedIn, navigate]);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -45,6 +53,7 @@ function Register({ onSubmit }) {
           placeholder="Введите имя"
           required
           pattern={NAME_PATTERN}
+          disabled={isLoading}
         />
         <span
           className={`register__input-error ${
@@ -67,6 +76,7 @@ function Register({ onSubmit }) {
           onChange={handleChange}
           placeholder="Введите email"
           required
+          disabled={isLoading}
         />
         <span
           className={`register__input-error ${
@@ -92,6 +102,7 @@ function Register({ onSubmit }) {
           onChange={handleChange}
           placeholder="Введите пароль"
           required
+          disabled={isLoading}
         />
         <span
           className={`register__input-error ${

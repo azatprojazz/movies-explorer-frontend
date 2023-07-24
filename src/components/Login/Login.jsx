@@ -2,12 +2,20 @@ import './Login.css';
 
 import AuthPage from '../AuthPage/AuthPage';
 import { useForm } from '../../hooks/useForm';
+import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
-function Login({ onSubmit }) {
+function Login({ onSubmit, isLoading, isLoggedIn }) {
   const { values, errors, isFormValid, handleChange } = useForm({
     email: '',
     password: '',
   });
+
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    isLoggedIn && navigate('/');
+  }, [isLoggedIn, navigate]);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -41,6 +49,7 @@ function Login({ onSubmit }) {
           placeholder="Введите email"
           autoComplete="off"
           required
+          disabled={isLoading}
         />
         <span
           className={`login__input-error ${
@@ -65,6 +74,7 @@ function Login({ onSubmit }) {
           placeholder="Введите пароль"
           autoComplete="off"
           required
+          disabled={isLoading}
         />
         <span
           className={`login__input-error ${

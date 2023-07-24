@@ -88,6 +88,7 @@ function Profile({
               autoComplete="off"
               placeholder="Введите имя"
               pattern={NAME_PATTERN}
+              disabled={isLoading}
             />
             <span className="profile__input-error">{errors.name}</span>
           </label>
@@ -105,6 +106,7 @@ function Profile({
               placeholder="Введите email"
               required
               autoComplete="off"
+              disabled={isLoading}
             />
             <span className="profile__input-error">{errors.email}</span>
             {''}
