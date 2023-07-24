@@ -44,6 +44,8 @@ function App() {
   const [isPageLoading, setIsPageLoading] = useState(true);
   const [isMoviesLoading, setIsMoviesLoading] = useState(false);
   const [isSavedMoviesLoading, setIsSavedMoviesLoading] = useState(false);
+  const [isRegisterLoading, setIsRegisterLoading] = useState(false);
+  const [isLoginLoading, setIsLoginLoading] = useState(false);
   const [currentUser, setCurrentUser] = useState({});
   const [isSuccess, setIsSuccess] = useState(true);
   const [serverError, setServerError] = useState('');
@@ -209,6 +211,7 @@ function App() {
 
   // Обработчик входа в систему
   const handleLogin = async ({ email, password }) => {
+    setIsLoginLoading(true);
     try {
       const { data } = await mainApi.loginUser({ email, password });
       setCurrentUser(data);
@@ -219,11 +222,14 @@ function App() {
       console.log(err);
       handleError(err);
       setIsLoggedIn(false);
+    } finally {
+      setIsLoginLoading(false);
     }
   };
 
   // Обработчик регистрации
   const handleRegister = async ({ name, email, password }) => {
+    setIsRegisterLoading(true);
     try {
       const { data } = await mainApi.registerUser({ name, email, password });
       if (data) {
@@ -233,6 +239,8 @@ function App() {
       console.log(err);
       handleError(err);
       setIsLoggedIn(false);
+    } finally {
+      setIsRegisterLoading(false);
     }
   };
 
@@ -387,8 +395,12 @@ function App() {
       onSave={handleProfileUpdate}
     />
   );
-  const registerComponent = <Register onSubmit={handleRegister} />;
-  const loginComponent = <Login onSubmit={handleLogin} />;
+  const registerComponent = (
+    <Register isLoggedIn={isLoggedIn} onSubmit={handleRegister} isLoading={isRegisterLoading} />
+  );
+  const loginComponent = (
+    <Login isLoggedIn={isLoggedIn} onSubmit={handleLogin} isLoading={isLoginLoading} />
+  );
   const notFoundComponent = <NotFound />;
 
   // Если страница все еще загружается, отображаем прелоадер
