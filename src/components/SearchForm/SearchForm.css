@@ -27,11 +27,11 @@
 }
 
 .search-form__input:focus {
-  box-shadow: 0 0px 0px 2px var(--btn-color-ocean);
+  box-shadow: 0 0 0 2px var(--btn-color-ocean);
 }
 
 .search-form__input::placeholder {
-  color: #8b8b8b;
+  color: var(--bg-color-lighter);
 }
 
 .search-form__btn {

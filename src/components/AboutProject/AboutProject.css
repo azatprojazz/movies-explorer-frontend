@@ -87,7 +87,7 @@
 }
 
 .about-project__line-title_active::before {
-  background-color: #ff0000;
+  background-color: var(--btn-color-light);
 }
 
 .about-project__line-title_active:hover {

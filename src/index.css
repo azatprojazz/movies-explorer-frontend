@@ -11,28 +11,30 @@ body {
 
 /* colors */
 :root {
-  --bg-color-darkest: #202020;
-  --bg-color-darker: #272727;
   --bg-color-dark: #303030;
-  --bg-color-medium: #073042;
+  --bg-color-darker: #272727;
+  --bg-color-darkest: #202020;
   --bg-color-light: #424242;
   --bg-color-lighter: #8b8b8b;
+  --bg-color-medium: #073042;
   --border-color-lighter: #e6e6e6;
-  --text-color-darkest: #000;
-  --text-color-darker: #2f2f2f;
-  --text-color-light: #a0a0a0;
-  --text-color-lighter: #fff;
-  --search-color-medium: #2f2f2f;
-  --btn-color-medium: #313131;
+  --btn-color-grey: #c2c2c2;
   --btn-color-light: #ee3465;
   --btn-color-lighter: #3ddc84;
+  --btn-color-medium: #313131;
   --btn-color-ocean: #4285f4;
+  --btn-color-white: #f8f8f8;
+  --search-color-medium: #2f2f2f;
+  --text-color-darker: #2f2f2f;
+  --text-color-darkest: #000;
+  --text-color-light: #a0a0a0;
+  --text-color-lighter: #fff;
 }
 
 /* animation */
 :root {
-  --animation-time: 1.5s;
   --animation-cubic: cubic-bezier(0.3, 0.8, 0, 1);
+  --animation-time: 1.5s;
 }
 
 /* opacity */

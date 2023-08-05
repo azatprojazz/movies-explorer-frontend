@@ -1,5 +1,7 @@
-import { Link, NavLink, useLocation } from 'react-router-dom';
 import './Navigation.css';
+
+import { Link, NavLink, useLocation } from 'react-router-dom';
+
 import AccountBtn from '../AccountBtn/AccountBtn';
 
 // Вспомогательная функция для проверки, соответствует ли текущий pathname путям, связанным с фильмами

@@ -18,17 +18,14 @@
 .profile__fieldset {
   height: 62px;
   margin: 0;
-  margin-bottom: 86px;
   padding: 0;
   border: none;
 }
 
 .profile__label {
   position: relative;
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 18px;
-  padding-bottom: 16px;
+  display: grid;
+  grid-template-rows: 17px 12px;
 }
 
 .profile__label::after {
@@ -47,10 +44,13 @@
 }
 
 .profile__label:first-child {
+  margin-bottom: 18px;
   border-bottom: 1px solid var(--bg-color-light);
 }
 
 .profile__descr {
+  grid-area: 1/1;
+  align-self: flex-start;
   width: 65px;
   font-size: 11px;
   font-weight: 500;
@@ -58,6 +58,8 @@
 }
 
 .profile__input {
+  grid-area: 1/2;
+  align-self: flex-start;
   width: 100%;
   padding: 0;
   text-align: end;
@@ -70,9 +72,21 @@
   font-style: normal;
 }
 
+.profile__input-error {
+  overflow: hidden;
+  grid-area: 2 / span 2;
+  width: 100%;
+  max-width: 410px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: var(--btn-color-light);
+  font-size: 10px;
+  font-weight: 500;
+  font-style: normal;
+}
+
 .profile__list-link {
   margin: 0;
-  margin-top: 17px;
   padding: 0;
   list-style: none;
   text-align: center;
@@ -111,7 +125,7 @@
   }
 
   .profile__fieldset {
-    margin-bottom: 77px;
+    margin-bottom: 61px;
   }
 }
 
@@ -126,7 +140,7 @@
   }
 
   .profile__fieldset {
-    margin-bottom: 243px;
+    margin-bottom: 167px;
   }
 
   .profile__descr {

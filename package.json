@@ -23,6 +23,7 @@
     "react-router-dom": "^6.11.2",
     "react-router-hash-link": "^2.4.3",
     "react-scripts": "5.0.1",
+    "validator": "^13.9.0",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -46,5 +47,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
   }
 }

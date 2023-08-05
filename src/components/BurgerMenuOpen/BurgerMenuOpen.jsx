@@ -1,5 +1,6 @@
-import { useLocation } from 'react-router-dom';
 import './BurgerMenuOpen.css';
+
+import { useLocation } from 'react-router-dom';
 
 function BurgerMenuOpen({ onOpenBurger, isLoggedIn }) {
   const location = useLocation();
