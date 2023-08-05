@@ -33,7 +33,12 @@ function AboutMe() {
             </a>
           </li>
         </ul>
-        <img className="about-me__img" src={profilePhoto} alt="Изображение автора" />
+        <img
+          className="about-me__img"
+          src={profilePhoto}
+          alt="Изображение автора"
+          draggable="false"
+        />
       </div>
     </section>
   );
